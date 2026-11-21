@@ -37,13 +37,3 @@ def get_db():
         yield db
     finally:
         db.close()
-
-if __name__ == "__main__":
-
-    try:
-        with engine.connect() as connection:
-            print("Conexión a MySQL exitosa")
-
-    except Exception as error:
-        print("Error al conectar con MySQL:")
-        print(error)
